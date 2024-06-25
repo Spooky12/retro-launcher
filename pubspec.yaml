@@ -1,0 +1,46 @@
+name: retro_launcher
+description: "A custom Android launcher created with Flutter, with a retro video game-inspired UI"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  device_apps: ^2.2.0
+  nes_ui: ^0.20.0
+  flutter_shaders: # ^0.1.3
+    # v0.1.3 is not available yet on pub.dev
+    git: https://github.com/jonahwilliams/flutter_shaders.git
+  hooks_riverpod: ^2.5.1
+  flutter_hooks: ^0.20.5
+  riverpod_annotation: ^2.3.5
+  flutter_riverpod: ^2.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+  riverpod_generator: ^2.4.0
+  build_runner: ^2.4.11
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  shaders:
+    - packages/flutter_shaders/shaders/pixelation.frag
